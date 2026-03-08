@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weather App</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      width: 360px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    h1 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .location {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+
+    .weather-box {
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 10px;
+      background: #f5f7fa;
+      text-align: left;
+    }
+
+    .weather-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 15px;
+      color: #555;
+    }
+
+    .weather-row:last-child {
+      border-bottom: none;
+    }
+
+    .label {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Weather App</h1>
+
+<div class="location">
+  <%= city %>
+</div>
+
+<div class="weather-box">
+
+  <div class="weather-row">
+    <span class="label">Temperature</span>
+    <span><%= temp %> °C</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Feels Like</span>
+    <span><%= feels_like %> °C</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Wind Speed</span>
+    <span><%= wind %> m/s</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Wind Direction</span>
+    <span><%= direction %>°</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Humidity</span>
+    <span><%= humidity %> %</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Cloud Coverage</span>
+    <span><%= clouds %> %</span>
+  </div>
+
+  <div class="weather-row">
+    <span class="label">Pressure</span>
+    <span><%= pressure %> hPa</span>
+  </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
